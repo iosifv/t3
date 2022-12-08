@@ -4,13 +4,17 @@
 # PLATFORM_NAME
 
 PATH_FOR_WWW="/Users/iosif/www"
-PATH_FOR_T3="${DIR_PATH_FOR_WWW}/github/t3"
-PATH_FOR_T3_PLATFORM="${DIR_PATH_FOR_T3}/platform-${PLATFORM_NAME}"
+PATH_FOR_T3="${PATH_FOR_WWW}/github/t3"
+PATH_FOR_T3_PLATFORM="${PATH_FOR_T3}/platform-${PLATFORM_NAME}"
 
 PATH_FOR_BIN="/usr/bin"
 
-# Todo: load all from platform agnostic directory
-source $DIR_PATH_FOR_T3/platform-agnostic/*
+# Load all from platform agnostic directory
+for f in $PATH_FOR_T3/platform-agnostic/*; do {
+    source $f
+} done
 
-# Todo: load all from platform specific directory
-source $PATH_FOR_T3_PLATFORM/*
+# Load all from platform specific directory
+for f in $PATH_FOR_T3/platform-$PLATFORM_NAME/*; do {
+    source $f
+} done

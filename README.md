@@ -15,8 +15,10 @@ git clone git@github.com:iosifv/t3.git
 ### Use install script
 
 ```bash
-sh installer.sh
+sh t3install.sh
 ```
+
+![](media/installer.jpg)
 
 
 ### Todo List

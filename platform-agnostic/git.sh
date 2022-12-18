@@ -2,6 +2,14 @@
 
 # Git pulls a certain branch
 function t3-gpush {
+  local CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+  gum style --foreground=3 "Changes found in the following files:"
+  git status -s
+
+  gum style --foreground=3 "Pushing all changes to: origin/${CURRENT_BRANCH}"
+  git add .
+
   TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
   SCOPE=$(gum input --placeholder "scope")
 
@@ -14,4 +22,15 @@ function t3-gpush {
 
   # Commit these changes
   gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"
+
+  git commit -m "[${CURRENT_BRANCH}] - $1"
+  git push origin $CURRENT_BRANCH
+
+  gum style --foreground=3 "====================================="
+  git status
+  gum style --foreground=3 "====================================="
+
+
+
+
 }

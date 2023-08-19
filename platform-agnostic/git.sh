@@ -27,7 +27,9 @@ function t3-gpush {
   git status
   gum style --foreground=3 "====================================="
 
+}
 
-
-
+# Search text through all past revisions of git
+function t3-gsearch {
+  git rev-list --all | xargs git grep "$1"
 }

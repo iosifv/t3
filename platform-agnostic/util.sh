@@ -43,38 +43,12 @@ function internet-ping {
 
 alias internet-speed='speedtest'
 
-function internet-speed-world {
-  print-status "New York:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-nyc1.digitalocean.com/10mb.test
-  print-status "Amsterdam:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-ams2.digitalocean.com/10mb.test
-  print-status "San Francisco:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-sfo1.digitalocean.com/10mb.test
-  print-status "Singapore:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-sgp1.digitalocean.com/10mb.test
-  print-status "London:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-lon1.digitalocean.com/10mb.test
-  print-status "Frankfurt:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-fra1.digitalocean.com/10mb.test
-  print-status "Toronto:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-tor1.digitalocean.com/10mb.test
-  print-status "Bangalore:"
-  wget --output-document=/dev/null -q --show-progress http://speedtest-blr1.digitalocean.com/10mb.test
-}
-
-alias internet-graph='speedometer -r eth0'
-
 # Super useful weather info because asking Siri or Google is mainstream
 #----------------------------
-alias weather='curl wttr.in'
-alias weather2='curl "wttr.in/?format=v2"'
-alias weatherLondon='curl wttr.in/London'
-alias weatherCluj='curl wttr.in/Cluj'
-alias weatherWroclaw='curl wttr.in/Wroclaw'
-
-
-
-
+alias weather='curl "wttr.in/?format=v2"'
+alias weatherLondon='curl "wttr.in/London?format=v2"'
+alias weatherCluj='curl "wttr.in/Cluj?format=v2"'
+alias weather3='curl v3.wttr.in'
 
 alias dos2unix-dir='find . -name "*.*" | xargs dos2unix'
 alias dir-dos2unix='dos2unix-dir'

@@ -61,5 +61,3 @@ resource() {
     print-status "Sourcing ~/.zshrc"
     source ~/.zshrc;
 }
-
-alias edit-zsh='nano +100 ~/.zshrc'

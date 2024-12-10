@@ -41,6 +41,10 @@ PATH_FOR_T3=$(pwd)
 APPEND_CODE="\n\n# T3 Config\n# ==========\n"
 APPEND_CODE+="PLATFORM_NAME=${CHOSEN_PLATFORM}\n"
 APPEND_CODE+="source ${PATH_FOR_T3}/loader.sh"
+APPEND_CODE+="\n"
+APPEND_CODE+="eval \"$(oh-my-posh init zsh --config /Users/iosif/www/github/t3/oh-my-posh-themes/_in-use-simlink.json)\""
+APPEND_CODE+="# End of T3 Config\n"
+
 
 # Confirming generated code
 gum style --italic "Generated code:"

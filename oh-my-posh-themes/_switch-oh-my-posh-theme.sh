@@ -3,7 +3,7 @@
 # Get all .omp.json files in the current directory
 themes=(*.omp.json)
 
-echo "Let's start"
+echo "\n More themes to download here: https://ohmyposh.dev/docs/themes \n"
 
 # Check if there are any theme files
 if [ ${#themes[@]} -eq 0 ]; then
@@ -12,7 +12,7 @@ if [ ${#themes[@]} -eq 0 ]; then
 fi
 
 # Print header
-echo "Available Oh My Posh themes:"
+echo "Available Local themes:"
 echo "-------------------------"
 
 # Create selection menu

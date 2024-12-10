@@ -1,17 +1,14 @@
-# SSH to my servers
+# SSH to my servers (don't have any right now :( )
 #----------------------------
 
-# Personal
-alias sshto-dreamhost='ssh ioto@173.236.227.58'
-alias sshto-vultr='ssh ioto@104.238.172.170'
-alias sshto-iosifv='ssh ioto@104.238.172.170'
-alias sshto-vultroot='confirmDragons ssh root@104.238.172.170'
 
 # Open working folders
 #----------------------------
 alias www="cd ${PATH_FOR_WWW}/"
 alias github="cd ${PATH_FOR_WWW}/github/"
 alias artetra="cd ${PATH_FOR_WWW}/artetra/"
+alias t3="cd ${PATH_FOR_WWW}/github/t3/"
+alias recspenses="cd ${PATH_FOR_WWW}/github/recspenses/"
 
 alias code-github="code ${PATH_FOR_WWW}/github/"
 alias code-casa4="code ${PATH_FOR_WWW}/github/casa4/"

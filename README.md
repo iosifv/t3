@@ -20,6 +20,11 @@ sh t3install.sh
 
 ![](media/installer.jpg)
 
+### Select one of the local themes for Oh My Posh
+
+```bash
+oh-my-posh-theme-switch
+```
 
 ### Todo List
 - [x] Load all files from a folder with a for loop

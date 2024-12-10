@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# Get all .omp.json files in the current directory
+# Get all .omp.json files in the current directory and remove the extension
 themes=(*.omp.json)
+themes=("${themes[@]%.omp.json}")
+
+# Echo the available themes without the extension
+echo "Available themes without extension: ${themes[@]}"
 
 echo "\n More themes to download here: https://ohmyposh.dev/docs/themes \n"
 
@@ -24,7 +28,7 @@ select theme in "${themes[@]}"; do
         fi
 
         # Create new symlink
-        ln -s "$theme" "_in-use-simlink.json"
+        ln -s "$theme.omp.json" "_in-use-simlink.json"
         echo "Theme switched to: $theme"
         break
     else

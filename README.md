@@ -20,6 +20,11 @@ sh t3install.sh
 
 ![](media/installer.jpg)
 
+### Install nerd fonts
+
+- [Test Nerd Fonts](https://www.programmingfonts.org/#twilio-sans-mono)
+- [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
 ### Select one of the local themes for Oh My Posh
 
 ```bash

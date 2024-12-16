@@ -4,9 +4,6 @@
 themes=(*.omp.json)
 themes=("${themes[@]%.omp.json}")
 
-# Echo the available themes without the extension
-echo "Available themes without extension: ${themes[@]}"
-
 echo "\n More themes to download here: https://ohmyposh.dev/docs/themes \n"
 
 # Check if there are any theme files
